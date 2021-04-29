@@ -14,7 +14,7 @@
 
 
 
-@media(max-width: 1030px) {
+@media(max-width: 1160px) {
 	body.lock {
 		overflow: hidden;
 		z-index: 1000;
@@ -22,7 +22,6 @@
 	.header-burger {
 		display: block;
 		position: relative;
-		margin: 0px 20px 0 0;
 		width: 30px;
 		height: 30px;
 		z-index: 1000000000;
@@ -135,6 +134,10 @@
 	.contacts_content-blocks {
 		flex-direction:column;
 	}
+
+	.cssbackground-sector-header h2{
+		font-size: 1.3em;
+	}
 }
 @media(max-width: 720px) {
 	.heading {
@@ -153,3 +156,19 @@
 	}
 }
 
+@media(max-width:600px){
+	.slider .top_menu nav{
+		/* flex-direction:column; */
+	}
+	.cssbackground-sector-header h2{
+		font-size: 1.2em;
+	}
+}
+@media(max-width:600px){
+	.cssbackground-sector-header h2{
+		font-size: 1.2em;
+	}
+	.slider .top_menu nav{
+		padding: 5px 10px;
+	}
+}

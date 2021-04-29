@@ -114,6 +114,22 @@ $(window).scroll(function() {
 
 
 
+// сервисы
+$(document).ready(function() {
+	$('body').on('click','.spoller',function(event) {
+		if($(this).hasClass('closeall') && !$(this).hasClass('active')){
+		}
+		$(this).toggleClass('active').next().slideToggle(300,function(index, val) {
+			if($(this).parent().find('.slick-slider').length>0){
+				$(this).parent().find('.slick-slider').slick('setPosition');
+			}
+		});
+	});
+});	
+
+
+/* --------------------------------- gallery -------------------------------- */
+
 $(document).ready(function() { // Ждём загрузки страницы
 	
 	$(".image").click(function(){	// Событие клика на маленькое изображение

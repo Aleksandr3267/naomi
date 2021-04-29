@@ -1,121 +1,5 @@
-/*Обнуление*/
-*,
-*:before,
-*:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-:focus,
-:active {
-  outline: none;
-}
-
-html,
-body,
-div,
-ul,
-* {
-  margin: 0;
-  padding: 0;
-}
-
-h1,
-h2,
-h3,
-pre,
-form,
-label,
-input,
-p,
-blockquote,
-th,
-td {
-  margin: 0;
-  padding: 0
-}
-
-img {
-  border: 0
-}
-
-ul {
-  list-style: none
-}
-
-a:focus,
-a:active {
-  outline: none;
-}
-
-nav,
-footer,
-header,
-aside {
-  display: block;
-}
-
-html,
-body {
-  height: 100%;
-  width: 100%;
-  font-size: 100%;
-  line-height: 1;
-  font-size: 14px;
-  -ms-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-}
-
-input,
-button,
-textarea {
-  font-family: inherit;
-}
-
-input::-ms-clear {
-  display: none;
-}
-
-button {
-  cursor: pointer;
-}
-
-button::-moz-focus-inner {
-  padding: 0;
-  border: 0;
-}
-
-a,
-a:visited {
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: none;
-}
-
-ul li {
-  list-style: none;
-}
-
-img {
-  vertical-align: top;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-size: inherit;
-  font-weight: inherit;
-}
-
-/*--------------------------------*/
-
+*,*:before,*:after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}:focus,:active{outline:none}html,body,div,ul,*{margin:0;padding:0}h1,h2,h3,pre,form,label,input,p,blockquote,th,td{margin:0;padding:0}img{border:0}ul{list-style:none}a:focus,a:active{outline:none}nav,footer,header,aside{display:block}html,body{height:100%;width:100%;font-size:100%;line-height:1;font-size:14px;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%}input,button,textarea{font-family:inherit}input::-ms-clear{display:none}button{cursor:pointer}button::-moz-focus-inner{padding:0;border:0}a,a:visited{text-decoration:none}a:hover{text-decoration:none}ul li{list-style:none}img{vertical-align:top}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}
+/* ------------------------------------ - ----------------------------------- */
 
 body {
   height: 100%;
@@ -131,7 +15,6 @@ body {
 
 .wrapper {
   overflow: hidden;
-  /* background: #7DB255; */
 }
 
 .container {
@@ -157,6 +40,8 @@ body {
 .header{
   position: relative;
   padding: 500px 0 500px 0;
+  background: rgba(0,0,0,0.2);
+
 }
 .header .bg_img{
   position: absolute;
@@ -165,6 +50,7 @@ body {
   top: 0;
   -webkit-filter: blur(3px); 
   filter: blur(3px); 
+  z-index: -1;
   background: url(../img/spa-still-life-with-beauty-products.jpg) no-repeat center top / cover;
 }
 .header .slider{
@@ -201,7 +87,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding:20px;
+  padding:5px 30px;
+  
 }
 /*logo*/
 .slider .top_menu nav .top_logo img{
@@ -210,18 +97,24 @@ body {
   max-width: 80px;
 }
 /*menu*/
+.slider .top_menu nav .menu{
+  display: flex;
+  align-items: center;
+}
+
 .slider .top_menu nav .menu ul {
   display: flex;
   align-items: center;
   text-align: center;
+  margin: 0 50px 0 0 ;
 }
 .slider .top_menu nav .menu ul li a {
   position: relative;
   display: inline-block;
   margin:0 30px;
-  color: white;
+  color: rgb(250, 250, 250);
   font-size: 1.2em;
-  font-weight: 600;
+  font-weight: 500;
   font-family: Montserrat, sans-serif;
   transition: all 0.5s;
 }
@@ -258,13 +151,15 @@ body {
   color: white;
   font-weight: 600;
   text-transform: uppercase;
-  padding: 20px 50px;
+  padding: 15px 40px;
   background: #29323D;
   border-radius:5px;
+  margin: 0 20px;
 }
 .slider .top_menu nav .instrumentary {
   display: flex;
   align-items: center;
+  /* margin: 0 20px; */
 }
 .slider .top_menu nav .instrumentary * {
   box-sizing: border-box;
@@ -275,17 +170,18 @@ body {
   display: inline-block;
   list-style: outside none none;
   overflow: hidden;
+  margin: 0 10px;
 }
 
 
-.slider .top_menu nav .instrumentary .inst a {
-  width: 100px;
-  padding: 0.3em 0;
-  color: rgba(255, 255, 255, 0.5);
+.slider .top_menu nav .instrumentary .inst a i{
+  padding: 0.5em 0;
+  color: rgba(255, 255, 255, 0.6);
   position: relative;
-  letter-spacing: 1px;
+  display: inline-block;
   margin: 0;
   text-decoration: none;
+  transition: all 0.35s ease;
 }
 .slider .top_menu nav .instrumentary .inst a:before,
 .slider .top_menu nav .instrumentary .inst a:after {
@@ -294,37 +190,37 @@ body {
   transition: all 0.35s ease;
 }
 
-.slider .top_menu nav .instrumentary .inst a:after {
-  padding: 0.3em 0;
+.slider .top_menu nav .instrumentary .inst a  .fa-facebook-square:after, .slider .top_menu nav .instrumentary .inst a .fa-twitter::after {
+  padding: 0.5em 0;
   position: absolute;
   top: 100%;
   left: 0;
-  content: "\f107";
-  display: block;
-  font-family: FontAwesome;
-  font-size: 1.5em;
+  display: inline-block;
+  /* font-family: FontAwesome; */
+  font-size: 1em;
   color: white;
   white-space: nowrap;
 }
-.slider .top_menu nav .instrumentary .inst:hover a{
-  transform: translateY(-100%);
+.slider .top_menu nav .instrumentary .inst a .fa-facebook-square:after{
+  content: "\f082";
 }
-
-
-
-.slider .top_menu nav .instrumentary .inst i{
-  font-size: 20px;
+.slider .top_menu nav .instrumentary .inst a .fa-twitter::after {
+  content: "\f099";
+}
+.slider .top_menu nav .instrumentary .inst:hover a i{
+  transform: translateY(-100%);
   color: white;
+}
+.slider .top_menu nav .instrumentary .inst i{
+  font-size: 1.4em;
+  color: rgba(255, 255, 255, 0.7);
   transition: all 0.5s;
   opacity: 0.8;
 }
 .slider .top_menu nav .instrumentary .inst {
   margin-left: 22px;
 }
-/* .slider .top_menu nav .instrumentary .inst i:hover {
-  color: #c7b299;
-  cursor: pointer;
-} */
+
 
 /*contant*/
 .slider .oglavline {
@@ -351,7 +247,7 @@ body {
   -webkit-box-shadow: inset 0 0 7px rgba(0,0,0,0.5);
   -o-box-shadow: inset 0 0 7px rgba(0,0,0,0.5);
   box-shadow: inset 0 0 7px rgba(0,0,0,0.5);
-  padding: 20px;
+  padding: 20px 20px 30px 20px;
   transition: 0.2s ease-in;
   box-shadow:5px 5px 10px #32632d;
 }
@@ -400,6 +296,9 @@ body {
 }
 /* forma */
 .form_with_text .form_with-form .form_with_obratnuj-zvonok{
+  background: rgba(0,0,0,0.3);
+  padding: 50px 20px;
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -411,6 +310,23 @@ body {
   border:none;
   padding: 10px;
   margin: 10px 0;
+  background: inherit;
+  border-bottom: 2px solid #d7d052;
+  color: white;
+  transition: opacity 0.3s ease;
+}
+
+.form_with_text .form_with-form .form_with_obratnuj-zvonok .form_with_form-zvonok input::placeholder{
+  color:white;
+  transition: 0.3s ease;
+  position: relative;
+  /* right: 10px; */
+  
+}
+.form_with_text .form_with-form .form_with_obratnuj-zvonok .form_with_form-zvonok input:focus::placeholder{
+
+  transition: 0.3s ease;
+  color: transparent;
 }
 .form_with_text .form_with-form .form_with_obratnuj-zvonok .form_with_bot-send-mail{
   padding: 15px 30px;
@@ -423,8 +339,8 @@ body {
   margin: 20px 0 0 0;
   transition: 0.3s ease;
 }
-.form_with_text .form_with-form .form_with_obratnuj-zvonok .form_with_bot-send-mail:hover, .form_only-form_contact_form .form_only_bot-send-mail:hover{
-  background: rgb(61, 134, 61);
+.form_with_text .form_with-form .form_with_obratnuj-zvonok .form_with_bot-send-mail:hover, .form_only-form_contact_form .form_only_bot-send-mail:hover, .slider .top_menu nav .button_phone a:hover{
+  background: #aca416;
 }
 /* content text */
 .form_with_text .container .form_with-text_content{
@@ -433,8 +349,9 @@ body {
   margin: 0 0 0 100px;
   font-size: 1.3em;
   border-radius:10px;
-  padding: 10px;
-  background: rgba(255, 255, 255, 0.7);
+  padding: 15px;
+  color: white;
+  background: rgba(0,0,0,0.5);
 }
 .form_with_text .container .form_with-text_content h5{
   font-size: 1.5em;
@@ -448,7 +365,7 @@ body {
 
 /* --------------------------------- numbers -------------------------------- */
 .nambers_informs {
-  padding: 70px 20px;
+  padding: 150px 20px;
   width: 100%;
 }
 .nambers_informs h2 {
@@ -521,7 +438,7 @@ body {
 
 /* ---------------------------------- Our_advantages --------------------------------- */
 .our_advantages {
-  padding: 50px 20px 100px 20px;
+  padding: 80px 20px 120px 20px;
   background: url(../img/spa-still-bg2.jpg) no-repeat center top / cover;
   background-attachment: fixed;
 }
@@ -564,65 +481,104 @@ body {
 }
 
 
-/* ------------------------------- what_we_can ------------------------------ */
+/* ------------------------------- what_we_can ?------------------------------ */
 
 .what_we_can {
   padding: 20px;
 }
 .what_we_can .what_we_can-content {
   /* text-align: center; */
+  margin: 80px 0 0 0;
 }
 .what_we_can .what_we_can-content .we_can-content {
-  margin: 100px 0 0 0;
+  margin: 70px 0 0 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
+.what_we_can .what_we_can-content h2{
+  text-align: center;
+}
 .we_can-content .we_can-block {
   width: 100%;
   max-width: 300px;
+  /* height: 500px; */
+  background: rgba(128, 128, 128, 0.4);
   display: flex;
   flex-direction:column;
-  align-items: center;
+  padding: 20px;
+  border-radius: 20px;
+  /* align-items: center; */
   margin: 40px;
   transition: 0.3s linear;
 }
 .we_can-content .we_can-block h4{
   font-size: 1.7em;
 }
-.we_can-content .we_can-block p{
-  text-align: left;
-  font-size: 1.2em;
-  line-height: 25px;
-  max-height: 200px;
-  overflow: hidden;
-  padding: 15px;
-  margin: 20px 0 0 0;
-  border-radius:20px;
-  background: rgba(224, 224, 224, 0.3);
-  position: relative;
-  transition: 0.3s linear;
-}
 
-.we_can-content .we_can-block p:before {
-  content: "";
-  position: absolute;
-  background: inherit;
+
+
+
+
+
+.blick{
+	background: white;
+	border-radius: 6px;
+  display: inline-block;
   width: 100%;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  box-shadow: inset 0 0 2000px rgba(241, 241, 241, 0.5);
-  filter: blur(10px);
+	max-width: 1000px;
+  margin: 20px;
+	box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+.cssbackground-sector-header{
+  width: 100%;
+  max-width: 100%;
+  /* display: flex; */
+}
+.cssbackground-sector-header:hover{
+	cursor: pointer;
+}
+.cssbackground-sector-header i{
+	color: black;
+	margin-right: 20px;
+}
+.cssbackground-sector-header h2{
+	font-size: 2em;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin-left: 20px;
+	padding: 16px;
+  position: relative;
+}
+.cssbackground-sector-header h2:after{
+	content: "\25BC";
+	position: absolute;
+	left: 95%;
+	font-size: 12px;
+}
+.cssbackground-block{
+  width: 100%;
+  display: none;
+  
+  padding-bottom: 15px;	
+}
+.cssbackground-block .blocking{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 10px;
+} 
+
+.cssbackground-block p{
+	line-height: 22px;
+	margin-left: 30px;
+  font-size: 1.2em;
 }
 
-.we_can-content .we_can-block p:hover{
-  max-height: 100%;
-  box-shadow: 5px 5px 10px rgba(104, 102, 102, 0.644);
-  transform: translateX(-5px) translateY(-5px);
-}
+
+
+
+
 
 
 /* ------------------------------- specialists ------------------------------ */
@@ -630,19 +586,23 @@ body {
   padding: 20px;
 }
 .specialists_content {
+  padding: 20px;
 }
 .specialists_content-blocks {
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: center;
   
 }
 .specialists_content-blocks .specialists_content-block {
   display: flex;
   justify-content: center;
-  margin: 70px 20px;
+  margin: 40px 20px;
   
 }
 .specialists_content-blocks .specialists_content-block img{
   width: 100%;
-  max-width: 270px;
+  max-width: 290px;
   border-radius: 20px;
   transition: 0.3s ease;
 }
@@ -666,8 +626,8 @@ body {
 /* -------------------------------- gallery ------------------------------- */
 .gallery {
   background: url(../img/bg_gallery.png)no-repeat center top / cover;
-  margin: 90px 0 0 0;
-  padding: 105px 30px;
+  margin: 30px 0 50px 0;
+  padding: 55px 30px;
 }
 .gallery .container{
   display: flex;
@@ -814,26 +774,27 @@ width: 100%;
 }
 .contacts_content-blocks .contacts_content-block {
   width: 100%;
-  border: 1px solid black;
-  padding: 20px 20px 100px 20px;
+  /* border: 1px solid black; */
+  padding: 40px 20px 50px 20px;
+  background: rgb(187, 206, 79);
 }
 .contacts_content-blocks .contacts_content-block h5{
-  font-size: 1.8em;
-  margin: 20px 0 80px 0;
+  font-size: 2em;
+  margin: 20px 0 50px 0;
 
 }
 .contacts_content-blocks .contacts_content-block h5 i{
   margin: 0 10px;
 }
 .contacts_content-blocks .contacts_content-block p{
-  font-size: 1.2em;
+  font-size: 1.4em;
   margin: 10px 0 0 0;
 }
 
 /* ----------------------------- form_only-form ----------------------------- */
 .form_only-form {
   padding: 100px 20px;
-  background: rgb(83, 179, 91);
+  background: rgb(75, 74, 74);
 }
 .container {
 }
