@@ -76,7 +76,7 @@
 		color: white !important;
 	}
 }
-@media(max-width:1000px){
+@media(max-width:1080px){
 	.what_we_can {
 		padding: 20px;
 	}
@@ -186,6 +186,12 @@
 		margin: 0 0 0 0px;
 	}
 
+	.cssbackground-block {
+		display: flex;
+		justify-content: center;
+	}
+	
+
 	.cssbackground-sector-header ul li {
 		font-size: 1.2em;
 	}
@@ -208,7 +214,7 @@
 
 @media(max-width:600px){
 	.header{
-		padding: 30px 20px 120px 20px;
+		padding: 30px 20px 150px 20px;
 	}
 	.slider .oglavline .left_oglavline h1 {
 		font-size: 3em;
@@ -243,12 +249,23 @@
 
 	.specialists_content-blocks .specialists_content-block{
 		width: 260px;
+		margin: 20px 0;
 	}
 	.specialists_content-blocks .specialists_content-block img{
 		width: 100%;
 		max-width: 100%;
 		height:auto;
 		
+	}
+	.gallery {
+		margin: 20px 0 0px 0;
+	}
+	.gallery_slider {
+		margin: 60px 0 0 0;
+	}
+	.form_only-form {
+		padding: 60px 20px;
+		background: white;
 	}
 }
 @media(max-width:600px){
@@ -258,6 +275,17 @@
 	}
 }
 @media(max-width:400px){
+	.cssbackground-block {
+		max-width: auto;
+		height:300px;
+		position: relative;
+		z-index: 1;
+	}
+	.cssbackground-block img{
+		max-width: auto;
+		height:300px;
+
+	}
 	.form_with_text .form_with-form .form_with_obratnuj-zvonok .form_with_form-zvonok input {
 		width: 100%;
 		max-width: 500px;
