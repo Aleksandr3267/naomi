@@ -25,6 +25,28 @@
 <body>
   <!-- WRAPPER   -->
   <div class="wrapper">
+    <!-- form -->
+    <div class="main-content">
+      <form class="obratnuj-zvonok contact_form" action="contact-form.php" method="post">
+          <div class="form-zvonok">
+              <div class=" button_exit"></div>
+                  <div>
+                      <label for="name">Имя:<span>*</span></label>
+                      <input type="text" name="name" placeholder="Введите ваше имя" required />
+                  </div>
+                  <div>
+                      <label for="tel">Телефон:<span>*</span></label>
+                      <input type="tel" name="tel" placeholder="Введите номер телефона" required />
+                  </div>
+                  <div>
+                      <label for="message">Текст сообщения:</label>
+                      <textarea name="message" cols="40" rows="6" required></textarea>
+                  </div>
+                  <input name="bezspama" type="text" style="display:none" value="" />
+              <button class="bot-send-mail submit" type="submit">Отправить сообщение</button>
+          </div>
+      </form>
+    </div>
 
     <!-- header -->
     <header class="header">
@@ -88,7 +110,7 @@
             </div>
           </div>
           <div class="oglavline_buttons">
-            <a href="#" class="oglavline_buttons-request buttons-request">Оставить заявку</a>
+            <a href="#form_with_text" class="oglavline_buttons-request buttons-request">Оставить заявку</a>
             <div class="show-hide">Читать больше</div>
           </div>
         </div>
@@ -97,7 +119,7 @@
 
   
     <!-- -------------------------- form with text--------------------------- -->
-    <section class="form_with_text">
+    <section class="form_with_text ">
       <div class="form_with-left_sper">
         <img src="./img/sper_1.png" alt="sper_1">
       </div>
@@ -105,7 +127,7 @@
         <img src="./img/sper_2.png" alt="sper_2">
       </div>
       <div class="container">
-        <div class="form_with-form">
+        <div id="form_with_text" class="form_with-form">
           <form class="form_with_obratnuj-zvonok form_with_contact_form" action="contact-form.php" method="post">
               <div class="form_with_form-zvonok">
                 <div class="sd">
@@ -203,8 +225,9 @@
             
               <div class="blick">
                 <div class="cssbackground-sector-header">
-                  <h2>Комплексы:</h2>
+                  
                   <ul>
+                    <h2>Комплексы:</h2>
                     <li>Силовой  массаж всего тела</li>
                     <li>Спортивный массаж всего тела  </li>
                     <li>Огненный массаж всего тела</li>
@@ -236,9 +259,9 @@
 
               <div class="blick">
                 <div class="cssbackground-sector-header">
-                  <h2>Программа коррекции 
-                    фигуры:</h2>
                   <ul>
+                    <h2>Программа коррекции 
+                      фигуры:</h2>
                     <li> Лимфодренажный моделирующий комплекс </li>
                     <li>Миостимуляция </li>
                     <li>Прессотерапия </li>
@@ -273,8 +296,9 @@
 
               <div class="blick">
                 <div class="cssbackground-sector-header">
-                  <h2>Оздоровительные:</h2>
+
                   <ul>
+                    <h2>Оздоровительные:</h2>
                     <li> Осмотр врача реабилитолога </li>
                     <li>Контрастный душ </li>
                     <li> Иглотерапия</li>

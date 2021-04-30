@@ -59,6 +59,7 @@
 		overflow: auto;
 		width: 60%;
 		height: 100%;
+		z-index: 12000;
 	}
 	#main-menu.active {
 		left: 0;
@@ -138,6 +139,12 @@
 	.form_with_text .container{
 		flex-direction: column;
 	}
+	.form_with_text .form_with-form .form_with_obratnuj-zvonok{
+		border-radius: 10px 10px 0px 0px;
+	}
+	.form_with_text .container .form_with-text_content{
+		border-radius: 0px 0px 10px 10px;
+	}
 	/* form-form */
 	.form_with_text .form_with-form{
 		/* order: 2; */
@@ -155,7 +162,6 @@
 	}
 	.oglavline_buttons {
 		display: flex;
-		justify-content: space-around;
 		margin: 35px 0 0 0;
 	}
 	/*СЧЁТЫ*/
@@ -168,10 +174,6 @@
 
 	.contacts_content-blocks {
 		flex-direction:column;
-	}
-
-	.cssbackground-sector-header h2{
-		font-size: 1.3em;
 	}
 }
 @media(max-width: 720px) {
@@ -275,6 +277,20 @@
 	}
 }
 @media(max-width:400px){
+	.header-burger.active:before, .header-burger.active:after  {
+		background: white;
+	}
+	
+	#main-menu {
+		width: 100%;
+	}
+	.slider .oglavline .left_oglavline h1 {
+		font-size: 2.2em;
+	}
+	.slider .oglavline .left_oglavline p{
+		font-size: 1.7em;
+	}
+
 	.cssbackground-block {
 		max-width: auto;
 		height:300px;
@@ -284,7 +300,6 @@
 	.cssbackground-block img{
 		max-width: auto;
 		height:300px;
-
 	}
 	.form_with_text .form_with-form .form_with_obratnuj-zvonok .form_with_form-zvonok input {
 		width: 100%;

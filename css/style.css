@@ -21,6 +21,116 @@ body {
   max-width: 100%;
   margin: 0 auto;
 }
+/* ---------------------------------- forms --------------------------------- */
+.main-content{
+  width: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  z-index: 100000000;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  overflow: auto;
+  padding: 20px 0;
+  text-align: center;
+  display: none;
+  background: rgba(0,0,0,0.7);
+}
+.main-content.active{
+  display: flex;
+}
+body.lock{
+  overflow: hidden;
+  z-index: 1000;
+}
+.button_exit{
+  position: relative;
+  width: 50px;
+  transition: 0.3s ease;
+}
+.button_exit::after{
+  content: "";
+  position:absolute;
+  width: 100%;
+  height: 4px;
+  display: block;
+  background: white;
+  transform: rotate(45deg);
+  left: 0px;
+}
+.button_exit::before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  display: block;
+  background: white;
+  transform: rotate(-45deg);
+}
+.button_exit:hover{
+  opacity: 0.4;
+  cursor: pointer;
+}
+/* forma */
+.obratnuj-zvonok{
+width: 100%;
+max-width: 350px;
+  color: white;
+  margin: auto 0 ;
+}
+.form-zvonok{
+width: 100%;
+display: flex;
+flex-direction: column;
+padding: 0 20px;
+box-sizing: border-box;
+}
+.form-zvonok div{
+padding: 15px 0;
+}
+.bot-send-mail{
+box-sizing: border-box;
+width: 100%;
+}
+.form-zvonok label,.form-zvonok input{
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+.form-zvonok label{
+margin-bottom: 5px;
+font-weight: bold;
+}
+.form-zvonok input{
+padding: 10px 15px;
+margin-top: 10px;
+}
+.form-zvonok label span{
+  color: red;
+}
+.form-zvonok .bot-send-mail{
+padding: 15px;
+margin-top: 10px;
+  background: none;
+  border: none;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: bold;
+  background:  #3CA3DD;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.5s ease;
+}
+.form-zvonok .bot-send-mail:hover{
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+.form-zvonok textarea{
+  max-width: 100%;
+  max-height: 250px;
+}
+
 /* --------------------------------- for all -------------------------------- */
 .heading{
   font-size: 3.5em;
@@ -199,6 +309,7 @@ body {
 }
 .spoiler ul li {
   font-size: 1.4em;
+  color: #000;
   display: block;
   height: auto;
   max-height: 0px;
@@ -206,7 +317,7 @@ body {
 }
 .spoiler ul li.active{
   max-height: 300px;
-  transition: 0.3s linear;
+  transition: 0.4s linear;
 }
 .show-hide{
   position: relative;
@@ -218,7 +329,8 @@ body {
   border-radius: 4px;
   font-size: 1.4em;
   color: black;
-  transition: 0.3s ease;
+  transition: 0.4s ease;
+  margin: 0 20px;
 }
 .show-hide:hover {
   cursor: pointer;
@@ -231,7 +343,6 @@ body {
 }
 .oglavline_buttons {
   display: flex;
-  justify-content: space-between;
   margin: 35px 0 0 0;
 }
 
@@ -279,6 +390,7 @@ body {
   border:none;
   padding: 10px;
   margin: 25px 0;
+  font-size: 1.4em;
   background: inherit;
   border-bottom: 2px solid white;
   color:black;
@@ -317,7 +429,7 @@ body {
 .form_with_text .container .form_with-text_content p{
   margin: 15px 0 0 0 ;
   line-height: 25px;
-  font-size: 1.2em;
+  font-size: 1em;
 }
 
 
@@ -453,7 +565,8 @@ body {
 }
 .our_advantages-content-advantageses  .our_advantages-block i{
   font-size: 3.5em;
-  color: #3CA3DD;
+  /* color: #1b95db; */
+  color: black;
   transition: 0.3s ease;
 }
 .our_advantages-content-advantageses  .our_advantages-block p{
@@ -493,20 +606,29 @@ body {
 .cssbackground-sector-header{
   width: 100%;
   max-width: 50%; 
+  display: flex;
+  flex-direction:column;
+  align-items: flex-end;
   order: 1;
-  text-align: right;
+  text-align: left;
+  position: relative;
 }
 .cssbackground-sector-header h2{
 	font-size: 2.2em;
 	font-weight: bold;
   position: relative;
+
+  /* margin: 0 150px 0 0; */
 }
 .cssbackground-sector-header ul{
   margin: 20px 0 0 0;
 }
+.cssbackground-sector-header ul h2{
+  margin: 0 0 30px 0;
+}
 .cssbackground-sector-header ul li{
   font-size: 1.4em;
-  margin: 15px 0;
+  margin: 10px 0;
   display: block;
   position: relative;
   line-height: 25px;
@@ -525,7 +647,7 @@ body {
 .cssbackground-block{
   max-width: 50%;
 }
-.blick:nth-child(2) .cssbackground-sector-header ul li::before, .blick:nth-child(4) .cssbackground-sector-header ul li::before, .blick:nth-child(6) .cssbackground-sector-header ul li::before{
+/* .blick:nth-child(2) .cssbackground-sector-header ul li::before, .blick:nth-child(4) .cssbackground-sector-header ul li::before, .blick:nth-child(6) .cssbackground-sector-header ul li::before{
   display: none;
 }
 .blick:nth-child(2) .cssbackground-sector-header ul li::after, .blick:nth-child(4) .cssbackground-sector-header ul li::after, .blick:nth-child(6) .cssbackground-sector-header ul li::after{
@@ -538,10 +660,11 @@ body {
   background: black;
   left: 10px;
   bottom: 5px;
-}
+} */
 .blick:nth-child(2) .cssbackground-sector-header, .blick:nth-child(4) .cssbackground-sector-header, .blick:nth-child(6) .cssbackground-sector-header{
   order: 0;
   text-align: left;
+  align-items: flex-start;
 }
 
 
@@ -588,18 +711,18 @@ body {
   position: relative;
   display: flex;
   margin: 30px 40px;
-  padding: 10px;
+  /* padding: 10px; */
   flex-direction: column;
   width: 100%;
   width: 320px;
   background: #E1E1E1;
-  box-shadow: 2px 5px 25px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 5px 25px rgba(0, 0, 0, 0.4);
   border-radius: 10px;
 }
 .specialists_content-blocks .specialists_content-block img{
   width: 100%;
   max-width: 100%;
-  height:290px;
+  height:auto;
   position: relative;
   top: 0;
   border-radius: 10px;
@@ -609,11 +732,17 @@ body {
   
 }
 .specialists_content-blocks .specialists_content-block .specialists_content-block-text h4{
-  font-size: 1.7em;
+  font-size: 1.5em;
+  font-weight: 600;
+  overflow: hidden;
+  
 }
+
 .specialists_content-blocks .specialists_content-block p{
-  font-size: 1.3em;
+  font-size: 1.2em;
   margin: 10px 0 0 0;
+  color: rgb(65, 65, 65);
+  line-height: 20px;
   
 }
 

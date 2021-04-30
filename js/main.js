@@ -8,6 +8,29 @@ $(document).ready(function(){
       $('body,html').animate({scrollTop: top}, 1000);
   });
 });
+$(document).ready(function(){
+  $(".oglavline_buttons").on("click","a", function (event) {
+      event.preventDefault();
+      var id  = $(this).attr('href'),
+          top = $(id).offset().top;
+      $('body,html').animate({scrollTop: top}, 1000);
+  });
+});
+
+
+
+// forms
+$(document).ready(function () {
+  $('.button_phone').click(function (event) {
+      $('.home_submit, .main-content').toggleClass('active');
+      $('body').toggleClass('lock');
+  });
+});
+$('.button_exit').on('click', function(){
+  $('.button_phone, .main-content').toggleClass('active');
+  $('body').toggleClass('lock');
+});
+
 
 // burger
 $(document).ready(function () {
