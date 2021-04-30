@@ -691,7 +691,6 @@ body {
   border-radius: 5px;
 }
 .gallery_slider .slider_item img{
-  height: 450px;
   width: 100%;
 }
 .gallery_slider .slick-dots li{
