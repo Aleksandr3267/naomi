@@ -8,6 +8,7 @@ $(document).ready(function(){
       $('body,html').animate({scrollTop: top}, 1000);
   });
 });
+
 // burger
 $(document).ready(function () {
   $('.header-burger').click(function (event) {
@@ -36,25 +37,26 @@ $(document).ready(function () {
     if (currentScroll > navBarOrgOffset) {
       if (currentScroll > previousScroll) {
         document.getElementById("navbar").style.top = "-100%";
-
-
-
       } else {
         document.getElementById("navbar").style.top = "0px";
         $('#navbar').addClass('fixed');
-
-
       }
     } else {
       $('#navbar').removeClass('fixed');
-
-
     }
     previousScroll = currentScroll;
   });
-
 });
 // -------------------------------------------------------------------------------
+
+// for button spoiler
+$(document).ready(function () {
+    $('.show-hide').click(function (event) {
+        $('.show-hide, .spoiler ul li').toggleClass('active');
+    });
+});
+
+
 
 // slider
 $(document).ready(function () {
@@ -112,20 +114,6 @@ $(window).scroll(function() {
     };
 });
 
-
-
-// сервисы
-$(document).ready(function() {
-	$('body').on('click','.spoller',function(event) {
-		if($(this).hasClass('closeall') && !$(this).hasClass('active')){
-		}
-		$(this).toggleClass('active').next().slideToggle(300,function(index, val) {
-			if($(this).parent().find('.slick-slider').length>0){
-				$(this).parent().find('.slick-slider').slick('setPosition');
-			}
-		});
-	});
-});	
 
 
 /* --------------------------------- gallery -------------------------------- */
