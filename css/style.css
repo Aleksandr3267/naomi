@@ -919,6 +919,7 @@ width: 100%;
   background: inherit;
   border-bottom: 2px solid black;
   color:black;
+  font-size: 1.4em;
   transition: opacity 0.3s ease;
 }
 .form_only-form-content .form_with-form .form_with_obratnuj-zvonok input::placeholder{
