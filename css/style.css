@@ -223,7 +223,7 @@ body {
   border: 1px solid #3CA3DD;
 }
 .show-hide.active {
-  opacity: 0;
+  display: none !important;
 }
 .oglavline_buttons {
   display: flex;
