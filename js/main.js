@@ -163,3 +163,55 @@ $(document).ready(function() { // Ждём загрузки страницы
 	});
 	
 });
+
+
+
+window.onload = function(){
+  const  parallax = document.querySelector('.form_with_text');
+
+  if(parallax){
+    //обьекты
+    const sperLeft = document.querySelector('.form_with-left_sper');
+    const sperRight = document.querySelector('.form_with-right_sper');
+
+    //коэфициент
+    const forSperLeft = 4;
+    const forSperRight = 7;
+
+    const speed = 0.05;
+
+    //обьявление переменных
+    let positionX = 0, positionY = 0;
+    let coordXprocent = 0, coordYprocent = 0;
+
+    function setMouseParallaxStyle(){
+      const distX = coordXprocent - positionX;
+      const distY = coordYprocent - positionY;
+
+      positionX = positionX + (distX * speed);
+      positionY = positionY + (distY * speed);
+
+      //передаём стили
+      sperLeft.style.cssText = `transform: translate(${positionX / forSperLeft}%,${positionY / forSperLeft}%);`;
+      sperRight.style.cssText = `transform: translate(${positionX / forSperRight}%,${positionY / forSperRight}%);`;
+
+      requestAnimationFrame(setMouseParallaxStyle);
+    }
+    setMouseParallaxStyle();
+
+    parallax.addEventListener("mousemove", function (e) {
+      //ПОЛУЧЕНИЕ ШИРИНЫ И ВЫСОТЫ БЛОКА
+      const parallaxWidth = parallax.offsetWidth;
+      const parallaxHeight = parallax.offsetHeight;
+
+      //НОЛЬ ПО СЕРЕДИНЕ
+      const coordX = e.pageX - parallaxWidth / 2;
+      const coordY = e.pageY - parallaxHeight / 2;
+
+      //получаем полценты
+      coordXprocent = coordX / parallaxWidth * 100;
+      coordYprocent = coordY / parallaxHeight * 100;
+
+    });
+  }
+}

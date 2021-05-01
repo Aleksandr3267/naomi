@@ -104,15 +104,31 @@ margin-bottom: 5px;
 font-weight: bold;
 }
 .form-zvonok input{
-padding: 10px 15px;
-margin-top: 10px;
+  padding: 10px 15px;
+  margin-top: 10px;
+  background: inherit;
+  border: none;
+  font-size: 1.3em;
+  color: grey;
+  border-bottom: 3px solid white;
 }
+.form-zvonok input::placeholder{
+  color:grey;
+  transition: 0.3s ease;
+  position: relative;
+  bottom: 3px;
+}
+.form-zvonok input:focus::placeholder{
+  transition: 0.3s ease;
+  color: transparent;
+}
+
 .form-zvonok label span{
   color: red;
 }
 .form-zvonok .bot-send-mail{
-padding: 15px;
-margin-top: 10px;
+  padding: 15px;
+  margin-top: 10px;
   background: none;
   border: none;
   text-transform: uppercase;
@@ -121,14 +137,18 @@ margin-top: 10px;
   background:  #3CA3DD;
   cursor: pointer;
   border-radius: 5px;
-  transition: 0.5s ease;
+  transition: 0.3s ease;
 }
 .form-zvonok .bot-send-mail:hover{
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
 }
 .form-zvonok textarea{
+  width: 100%;
   max-width: 100%;
-  max-height: 250px;
+  max-height: 280px;
+  min-width:100%;
+  min-height: 100px;
 }
 
 /* --------------------------------- for all -------------------------------- */
@@ -137,8 +157,9 @@ margin-top: 10px;
   font-weight: 500;
   text-transform: uppercase;
   color: black;
-  z-index: 1;
+  z-index: 2;
   position: relative;
+  text-shadow: 1px 5px 5px grey;
 }
 .buttons-request {
   font-size: 1.4;
@@ -157,6 +178,7 @@ margin-top: 10px;
 }
 .buttons-request:hover{
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
 }
 /*-------------------------------------------------------------------------*/
 
@@ -353,6 +375,16 @@ margin-top: 10px;
   position: relative;
   background: #E7E7E8;
 }
+.form_with_text::after{
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 100%;
+  height:120px;
+  top: -120px;
+  left: 0;
+  background: linear-gradient(to top, #E7E7E8, #ffffff00);
+}
 .form_with-left_sper, .form_with-right_sper {
   position: absolute;
 }
@@ -404,7 +436,6 @@ margin-top: 10px;
   bottom: 10px;
 }
 .form_with_text .form_with-form .form_with_obratnuj-zvonok .form_with_form-zvonok input:focus::placeholder{
-
   transition: 0.3s ease;
   color: transparent;
 }
@@ -439,8 +470,23 @@ margin-top: 10px;
   position: relative;
   width: 100%;
 }
+#ambers_info{
+  position: relative;
+}
+.nambers_informs::after{
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 100%;
+  height:80px;
+  top: -80px;
+  left: 0;
+  background: linear-gradient(to top, white, #ffffff00);
+}
+
 .nambers_informs .left_sper, .nambers_informs .right_sper{
   position: absolute;
+  z-index: 1;
 }
 .nambers_informs .left_sper{
   top: -50px;
@@ -546,7 +592,11 @@ margin-top: 10px;
   flex-wrap: wrap;
   justify-content: space-around;
   margin: 50px 0 0 0;
-
+}
+.our_advantages .our_advantages-content .our_advantages-content-advantageses *{
+  box-sizing: border-box;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
 }
 .our_advantages-content-advantageses  .our_advantages-block {
   background: #C4C4C4;
@@ -559,10 +609,28 @@ margin-top: 10px;
   color: black;
   transition: 0.3s ease-in-out;
   box-shadow: 0px 0px 10px grey;
+  display: inline-block;
+  overflow: hidden; 
+}
+
+
+.our_advantages-content-advantageses  .our_advantages-block  i{
+  color: rgba(255, 255, 255, 0.6);
+  position: relative;
+  display: inline-block;
+  margin: 10px 0;
+  text-decoration: none;
+  transition: all 0.35s ease;
+  
 }
 .our_advantages-content-advantageses  .our_advantages-block:hover  i{
-  font-size: 4em;
+  transform: translateY(-10px);
 }
+
+/* 
+.our_advantages-content-advantageses  .our_advantages-block:hover  i{
+  font-size: 4em;
+} */
 .our_advantages-content-advantageses  .our_advantages-block i{
   font-size: 3.5em;
   /* color: #1b95db; */
@@ -647,20 +715,6 @@ margin-top: 10px;
 .cssbackground-block{
   max-width: 50%;
 }
-/* .blick:nth-child(2) .cssbackground-sector-header ul li::before, .blick:nth-child(4) .cssbackground-sector-header ul li::before, .blick:nth-child(6) .cssbackground-sector-header ul li::before{
-  display: none;
-}
-.blick:nth-child(2) .cssbackground-sector-header ul li::after, .blick:nth-child(4) .cssbackground-sector-header ul li::after, .blick:nth-child(6) .cssbackground-sector-header ul li::after{
-  content: "";
-  position:relative;
-  width: 5px;
-  height:5px;
-  border-radius: 50%;
-  display: inline-block;
-  background: black;
-  left: 10px;
-  bottom: 5px;
-} */
 .blick:nth-child(2) .cssbackground-sector-header, .blick:nth-child(4) .cssbackground-sector-header, .blick:nth-child(6) .cssbackground-sector-header{
   order: 0;
   text-align: left;
@@ -853,31 +907,34 @@ margin-top: 10px;
 cursor:pointer;
 }
 .popup {
-position: fixed;
-height:100%;
-width:100%;
-top:0;
-left:0;
-display:flex;
+  position: fixed;
+  height:100%;
+  width:100%;
+  top:0;
+  left:0;
+  display:flex;
   justify-content: center;
   align-items: center;
-text-align:center;
+  text-align:center;
   z-index:10000000;
   padding: 20px;
 }
 .popup_bg {
-background:rgba(0,0,0,0.9);
-position:absolute;
-z-index:1;
-height:100%;
-width:100%;
+  background:rgba(0,0,0,0.9);
+  position:absolute;
+  z-index:1;
+  height:100%;
+  width:100%;
+  top: 0;
   text-align: center;
+  padding: 20px;
 }
 .popup_img {
-position: relative;
-margin:50px ;
-z-index:10000000;
-width: 100%;
+  position:absolute;
+  height:auto;
+  z-index:10000000;
+  width: 100%;
+  padding:20px;
   max-width: 600px;
 }
 
@@ -919,6 +976,7 @@ width: 100%;
   background: inherit;
   border-bottom: 2px solid black;
   color:black;
+  font-size: 1.4em;
   transition: opacity 0.3s ease;
 }
 .form_only-form-content .form_with-form .form_with_obratnuj-zvonok input::placeholder{
@@ -931,9 +989,10 @@ width: 100%;
 .form_only-form-content .form_with-form .form_with_obratnuj-zvonok input:focus::placeholder{
   transition: 0.3s ease;
   color: transparent;
+  opacity: 0;
 }
 .form_only-form-content .form_with-form .form_with_obratnuj-zvonok .buttons-request{
-  margin: 50px 0 0 0;
+  margin: 50px auto 0 auto;
 }
 /* content text */
 .form_only-form-content .contacts_content{
@@ -968,7 +1027,6 @@ width: 100%;
 /* --------------------------------- footer --------------------------------- */
 .footer {
   padding: 40px 0 0px 0;
-  
 }
 .foots {
   display: flex;
