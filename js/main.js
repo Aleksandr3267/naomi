@@ -18,6 +18,15 @@ $(document).ready(function(){
 });
 
 
+// new burger
+$('.top_menu .menu-toggle').on('click', function(){
+  $('body').toggleClass('open');
+  $('body').toggleClass('lock');
+  
+});
+
+
+
 
 // forms
 $(document).ready(function () {
@@ -75,7 +84,7 @@ $(document).ready(function () {
 // for button spoiler
 $(document).ready(function () {
     $('.show-hide').click(function (event) {
-        $('.show-hide, .spoiler ul li').toggleClass('active');
+        $('.show-hide, .spoiler ul').toggleClass('active');
     });
 });
 

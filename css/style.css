@@ -2,10 +2,10 @@
 /* ------------------------------------ - ----------------------------------- */
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 body {
   height: 100%;
-  font-family: Arial, sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 .clearfix:after {
   content: "";
@@ -28,18 +28,21 @@ body {
   display: flex;
   justify-content: center;
   text-align: center;
-  z-index: 100000000;
   left: 0;
   right: 0;
   height: 100vh;
   overflow: auto;
   padding: 20px 0;
   text-align: center;
-  display: none;
-  background: rgba(0,0,0,0.7);
+  transition: 0.3s ease;
+  z-index: -1;
+  opacity: 0;
+  background: rgba(0,0,0,0.9);
 }
 .main-content.active{
   display: flex;
+  z-index: 100000000;
+  opacity: 1;
 }
 body.lock{
   overflow: hidden;
@@ -160,6 +163,7 @@ font-weight: bold;
   z-index: 2;
   position: relative;
   text-shadow: 1px 5px 5px grey;
+  text-rendering: optimizeLegibility;
 }
 .buttons-request {
   font-size: 1.4;
@@ -186,7 +190,7 @@ font-weight: bold;
 
 .header{
   position: relative;
-  padding: 150px 20px 480px 20px;
+  padding: 120px 20px 320px 20px;
   top: 0;
   background: url(../img/glavnaya1.png) no-repeat center top / cover;
 }
@@ -216,24 +220,24 @@ font-weight: bold;
   padding:5px 30px;
 }
 /*logo*/
+.slider .top_menu nav .top_logo{
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+}
 .slider .top_menu nav .top_logo img{
   display: flex;
   align-items: center;
-  max-width: 80px;
-}
-/*menu*/
-.slider .top_menu nav .menu{
-  display: flex;
-  align-items: center;
+  max-width: 90px;
 }
 
-.slider .top_menu nav .menu ul {
-  display: flex;
-  align-items: center;
-  text-align: center;
-  margin: 0 50px 0 0 ;
+.top_menu button {
+  display: none;
 }
-.slider .top_menu nav .menu ul li a {
+.slider .top_menu nav .menu {
+  display: flex;
+}
+.slider .top_menu nav .menu  li a {
   position: relative;
   display: inline-block;
   margin:0 30px;
@@ -243,7 +247,9 @@ font-weight: bold;
   font-family: Montserrat, sans-serif;
   transition: all 0.5s;
 }
-.slider .top_menu nav .menu ul li a::after{
+
+
+.slider .top_menu nav .menu li a::after{
   content: "";
   display: inline-block;
   height: 3px;
@@ -263,7 +269,7 @@ font-weight: bold;
   left: 0;
   width: 100%;
 }
-.slider .top_menu nav .menu ul li a:hover::after {
+.slider .top_menu nav .menu li a:hover::after {
   width: 100%;
   -webkit-transform: scaleX(1);
   -ms-transform: scaleX(1);
@@ -272,6 +278,13 @@ font-weight: bold;
   -ms-transform-origin: left;
   transform-origin: left
 }
+
+
+
+
+
+
+
 .slider .top_menu nav .button_phone a{
   color: white;
   font-weight: 600;
@@ -289,11 +302,11 @@ font-weight: bold;
 .slider .oglavline {
   color: white;
   /* width: 100%; */
-  max-width: 650px;
+  max-width: 680px;
   position: relative;
   top: 100px;
   margin: 0 0 0 40px;
-  font-family: 'Roboto', sans-serif;
+  /* font-family: 'Roboto', sans-serif; */
 }
 .slider .oglavline .left_oglavline h1{
   font-size: 3.5em;
@@ -303,6 +316,7 @@ font-weight: bold;
 .slider .oglavline .left_oglavline p{
   font-size: 2.5em;
   text-transform: uppercase;
+  margin: 20px 0 0 0;
 }
 .slider .oglavline .right_oglavline{
   margin: 35px 0 0 0;
@@ -329,16 +343,22 @@ font-weight: bold;
   transition: 0, 5s ease;
   color: #0B2349;
 }
-.spoiler ul li {
-  font-size: 1.4em;
-  color: #000;
-  display: block;
+.spoiler ul{
   height: auto;
   max-height: 0px;
-  transition: max-height .3s;
+  transition: max-height 0.3s;
 }
-.spoiler ul li.active{
-  max-height: 300px;
+.spoiler ul li {
+  font-size: 1.4em;
+  line-height: 25px;
+  color: #000;
+  display: block;
+}
+.spoiler ul li:last-child{
+  margin: 20px 0 0 0;
+}
+.spoiler ul.active{
+  max-height: 100vh;
   transition: 0.4s linear;
 }
 .show-hide{
@@ -425,11 +445,11 @@ font-weight: bold;
   font-size: 1.4em;
   background: inherit;
   border-bottom: 2px solid white;
-  color:black;
+  color:white;
   transition: opacity 0.3s ease;
 }
 .form_with_text .form_with-form .form_with_obratnuj-zvonok .form_with_form-zvonok input::placeholder{
-  color:black;
+  color:white;
   transition: 0.3s ease;
   position: relative;
   font-size: 1.3em;
@@ -626,14 +646,8 @@ font-weight: bold;
 .our_advantages-content-advantageses  .our_advantages-block:hover  i{
   transform: translateY(-10px);
 }
-
-/* 
-.our_advantages-content-advantageses  .our_advantages-block:hover  i{
-  font-size: 4em;
-} */
 .our_advantages-content-advantageses  .our_advantages-block i{
   font-size: 3.5em;
-  /* color: #1b95db; */
   color: black;
   transition: 0.3s ease;
 }
@@ -668,8 +682,9 @@ font-weight: bold;
   display: flex;
   align-items: center;
   width: 100%;
+  max-width: 1300px;
 	justify-content: center;
-  margin: 20px;
+  margin:50px 20px;
 }
 .cssbackground-sector-header{
   width: 100%;
@@ -680,6 +695,7 @@ font-weight: bold;
   order: 1;
   text-align: left;
   position: relative;
+  margin: 120px 0 0 0;
 }
 .cssbackground-sector-header h2{
 	font-size: 2.2em;
