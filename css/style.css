@@ -301,12 +301,11 @@ font-weight: bold;
 /*contant*/
 .slider .oglavline {
   color: white;
-  /* width: 100%; */
   max-width: 680px;
   position: relative;
   top: 100px;
   margin: 0 0 0 40px;
-  /* font-family: 'Roboto', sans-serif; */
+  z-index: 2;
 }
 .slider .oglavline .left_oglavline h1{
   font-size: 3.5em;

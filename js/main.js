@@ -22,7 +22,10 @@ $(document).ready(function(){
 $('.top_menu .menu-toggle').on('click', function(){
   $('body').toggleClass('open');
   $('body').toggleClass('lock');
-  
+});
+$('.nav_menu_me .menu a').on('click', function(){
+  $('body').removeClass('open');
+  $('body').removeClass('lock');
 });
 
 
@@ -41,20 +44,6 @@ $('.button_exit').on('click', function(){
 });
 
 
-// burger
-$(document).ready(function () {
-  $('.header-burger').click(function (event) {
-    $('.header-burger, #main-menu').toggleClass('active');
-    $('body').toggleClass('lock');
-  });
-});
-$(document).ready(function () {
-  $('#main-menu a').click(function (event) {
-      $('.header-burger, #main-menu').removeClass('active');
-      $('body').removeClass('lock');
-  });
-});
-// 
 // --------------------------------------------------------------------------
 // ВЫДВИГАЕМОЕ МЕНЮ
 $(document).ready(function () {

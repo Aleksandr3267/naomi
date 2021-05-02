@@ -81,9 +81,9 @@
 		height: 100%;
 		display: flex;
 		justify-content: center;
-		/* transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
 		-webkit-backface-visibility: hidden;
-		backface-visibility: hidden; */
+		backface-visibility: hidden;
 		overflow-x: hidden;
 		overflow-y: auto;
 	}
@@ -95,6 +95,7 @@
 		bottom: 0;
 		left: 0;
 		margin: auto;
+		transform: scale(0.05) translateY(300%);
 		background: rgba(123, 156, 121, 0.98);
 		width: 100%;
 		height: 0;
@@ -217,7 +218,7 @@
 
 	.blick .cssbackground-sector-header {
 		order: 0 !important;
-		text-align: center;
+		text-align: center !important;
 		width: 100%;
 		max-width: 100%;
 		align-items: center !important;
