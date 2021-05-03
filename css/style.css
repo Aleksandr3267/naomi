@@ -868,7 +868,7 @@ font-weight: bold;
   margin-left: -25px;
 }
 .back p {
-  padding-top: 15px;
+  padding-top: 3px;
 }
 .all_in-one_block:hover .flipper{
   -webkit-transform: rotateY(180deg);
