@@ -264,10 +264,23 @@
 		/* --------------------------------- header --------------------------------- */
 	.header {
 		padding: 60px 20px 250px 20px;
+		
 	}
 	.heading {
 		font-size: 2em;
+		background:rgba(255, 255, 255, 0.5);
+		display: flex;
+		justify-content: center;
+		text-align: center;
+		border-radius: 10px;
 	}
+
+	.slider .oglavline{
+		background: rgba(0,0,0,0.08);
+		border-radius:10px;
+		padding: 5px;
+	}
+	
 	.slider .oglavline .left_oglavline p {
 		font-size: 2em;
 	}

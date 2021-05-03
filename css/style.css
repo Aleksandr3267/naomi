@@ -156,13 +156,13 @@ font-weight: bold;
 
 /* --------------------------------- for all -------------------------------- */
 .heading{
-  font-size: 3.5em;
+  font-size: 3em;
   font-weight: 500;
   text-transform: uppercase;
   color: black;
   z-index: 2;
   position: relative;
-  text-shadow: 1px 5px 5px grey;
+  /* text-shadow: 1px 5px 5px grey; */
   text-rendering: optimizeLegibility;
 }
 .buttons-request {
@@ -316,6 +316,7 @@ font-weight: bold;
   font-size: 2.5em;
   text-transform: uppercase;
   margin: 20px 0 0 0;
+  border-radius:10px;
 }
 .slider .oglavline .right_oglavline{
   margin: 35px 0 0 0;
@@ -744,7 +745,121 @@ font-weight: bold;
 }
 
 
+/* ------------------------------- all_in-one ------------------------------- */
+.all_in-one{
+  padding: 0 20px;
+}
+.all_in-one_content-blocks{
+  margin: 50px auto 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1500px;
 
+}
+.all_in-one_block {
+  text-align: center;
+  width: 320px;
+  margin: 50px;
+  -webkit-perspective: 1200;
+  perspective: 1200;
+  -moz-transform: perspective(1200px);
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d; 
+  transform-style: preserve-3d;
+  position: relative;
+  z-index: 2;
+}
+.flipper {
+  position: relative;
+  width: 320px;
+  height: 280px;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: .5s linear;
+  -moz-transition: .5s linear;
+  -o-transition: .5s linear;
+  transition: .5s linear;  
+}
+.front, .back {
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 40px 20px 20px;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius:20px;
+  box-shadow: 0 5px 10px 0 rgba(145, 145, 145, 0.5);
+  /* background: rgba(91, 153, 11, 0.644); */
+  background: linear-gradient(to top, #b4ce77, #678d7b);
+}
+.front {
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content: center;
+  z-index: 2;
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+}
+.flipper h3 {
+  font-size: 1.2em;
+  line-height: 20px;
+  text-transform: uppercase;
+  margin: 0 0 15px;
+}
+.flipper p {
+  font-size: 1em;
+  line-height: 25px;
+}
+.header-flipper h3 {
+  color: white;
+  text-align: center;
+  margin: 15px 0 0 0;
+}
+.header-flipper i{
+  font-size: 2.5em;
+  color: white;
+}
+.front p {
+  color: #818285;
+}
+.back {
+  -webkit-transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
+  -ms-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+  color: white;
+}
+.back h3 {
+  position: relative;
+}
+.back h3:after {
+  content: "";
+  width: 50px;
+  height: 1px;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  background: white;
+  margin-left: -25px;
+}
+.back p {
+  padding-top: 15px;
+}
+.all_in-one_block:hover .flipper{
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
 
 
 /* ------------------------------- specialists ------------------------------ */
@@ -776,6 +891,8 @@ font-weight: bold;
 .specialists_content .heading{
   text-align: center;
   color: white;
+  background:rgba(99, 99, 99, 0.3);
+  border-radius: 10px;
 }
 .specialists_content-blocks {
   display: flex;
