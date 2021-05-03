@@ -1,10 +1,13 @@
+@media(min-width: 1900px){
+	.header{
+		padding: 120px 20px 480px 20px;
+	}
+}
 @media(max-width: 1160px) {
 	body.lock {
 		overflow: hidden;
 		z-index: 1000;
 	}
-
-
 
 	.slider .top_menu .menu {
 		flex-direction:column;
@@ -188,16 +191,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
 	.gallery {
 		padding: 55px 5px;
 	}
@@ -268,11 +261,6 @@
 	}
 	.heading {
 		font-size: 2em;
-		background:rgba(255, 255, 255, 0.5);
-		display: flex;
-		justify-content: center;
-		text-align: center;
-		border-radius: 10px;
 	}
 	.slider .oglavline .left_oglavline p {
 		font-size: 2em;
@@ -295,21 +283,17 @@
 	.form_with_text .container {
 		flex-direction: column;
 	}
-
 	.form_with_text .form_with-form .form_with_obratnuj-zvonok {
 		border-radius: 10px 10px 0px 0px;
 	}
-
 	.form_with_text .container .form_with-text_content {
 		border-radius: 0px 0px 10px 10px;
 	}
-
 	/* form-form */
 	.form_with_text .form_with-form {
 		/* order: 2; */
 		margin: 50px 0 0 0;
 	}
-
 	/* form content text */
 	.form_with_text .container .form_with-text_content {
 		margin: 0;
@@ -375,34 +359,60 @@
 	.cssbackground-sector-header ul li {
 		font-size: 1.2em;
 	}
-
 	.all_in-one .all_in-one_texts p{
 		font-size: 1.4em;
 	}
-
 	.footer .foots {
 		flex-direction: column;
 		justify-content: center;
 	}
-
 	.left-foot {
 		justify-content: flex-end;
 	}
-
 	.form_with_text .container .form_with-text_content h5 {
 		font-size: 1.2em;
-
 	}
-
 	.form_with_text .container .form_with-text_content p {
-
 		font-size: 1em;
 	}
 }
 
 @media(max-width:600px) {
 	.header {
-		padding: 30px 20px 220px 20px;
+		padding: 30px 0px 220px 0px;
+		background: #AAACAF;
+	}
+	.header .bg_img{
+		position: relative;
+		height:280px;
+		order: 2;
+		box-sizing:border-box;
+		top: 100px;
+		z-index: 1;
+		background: url(../img/glavnaya1.png) no-repeat center right / cover;
+	}
+	.header .bg_img::after{
+		content: "";
+		position: absolute;
+		width: 100%;
+		height:50px;
+		display: inline-block;
+		background: linear-gradient(to bottom, #AAACAF, #ffffff00);
+	}
+	.header .bg_img::before{
+		content: "";
+		position: absolute;
+		width: 100%;
+		height:50px;
+		display: inline-block;
+		bottom:0;
+		background: linear-gradient(to top, #AAACAF, #ffffff00);
+	}
+
+
+	.slider .oglavline{
+		background:inherit ;
+		padding: 0 20px;
 	}
 	.slider .oglavline .left_oglavline h1 {
 		font-size: 1.6em;
@@ -429,9 +439,10 @@
 	.oglavline_buttons {
 		flex-direction: column;
 		align-items: center;
+		margin: 10px 0;
 	}
 	.oglavline_buttons .show-hide {
-		margin: 30px 0 0 0;
+		margin: 15px 0 0 0;
 		text-align: center;
 	}
 
@@ -448,6 +459,9 @@
 		font-size: 1em;
 	}
 
+	.all_in-one_block{
+		margin: 30px;
+	}
 
 	.specialists_content-blocks .specialists_content-block {
 		width: 270px;
@@ -480,7 +494,6 @@
 }
 
 @media(max-width:600px) {
-
 	.slider .top_menu nav {
 		padding: 5px 10px;
 	}
