@@ -190,7 +190,7 @@ font-weight: bold;
 
 .header{
   position: relative;
-  padding: 120px 20px 320px 20px;
+  padding: 120px 20px 350px 20px;
   top: 0;
   background: url(../img/glavnaya1.png) no-repeat center top / cover;
 }
@@ -351,7 +351,10 @@ font-weight: bold;
   font-size: 1.4em;
   line-height: 25px;
   color: #000;
-  display: block;
+  display: inline-block;
+}
+.spoiler ul li:nth-child(2){
+  border-bottom:1px solid black;
 }
 .spoiler ul li:last-child{
   margin: 20px 0 0 0;
@@ -390,7 +393,7 @@ font-weight: bold;
 
 /* ----------------------------- form_with_text ----------------------------- */
 .form_with_text{
-  padding: 150px 20px;
+  padding: 120px 20px;
   position: relative;
   background: #E7E7E8;
 }
@@ -414,6 +417,10 @@ font-weight: bold;
 .form_with-right_sper {
   right: 0;
   top: 20px;
+}
+
+.form_with_text .text_content-stock{
+  margin: 0px 0 50px 0;
 }
 .form_with_text .container{
   position: relative;
@@ -668,7 +675,7 @@ font-weight: bold;
   text-align: center;
 }
 .what_we_can .what_we_can-content .we_can-content {
-  margin: 70px 0 0 0;
+  margin: 40px 0 0 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -953,6 +960,29 @@ cursor:pointer;
   max-width: 600px;
 }
 
+/* ---------------------------- text_content-stock --------------------------- */
+.text_content-stock {
+  text-align: center;
+  font-size: 1.5em;
+  position: relative;
+  z-index: 1;
+}
+.text_content-stock p{
+  margin: 10px 0 0 0;
+}
+.text_content-stock p span{
+  position: relative;
+}
+.text_content-stock p span::after{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height:2px;
+  background: red;
+  display: inline-block;
+  left: 0;
+  top: 50%;
+}
 
 /* ----------------------------- form_only-form contacts ----------------------------- */
 .form_only-form {
@@ -1023,6 +1053,9 @@ cursor:pointer;
 }
 .form_only-form-content .contacts_content .contacts_content-block{
   margin: 20px;
+}
+.form_only-form-content .contacts_content .contacts_content-block a{
+  color: white;
 }
 .form_only-form-content .contacts_content h5{
   font-size: 1.4em;

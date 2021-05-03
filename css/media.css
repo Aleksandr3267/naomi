@@ -108,8 +108,8 @@
 		top: 0;
 	}
 	.open .nav_menu_me:before {
-		-webkit-animation: menu-animation 0.8s ease-out forwards;
-		animation: menu-animation 0.8s ease-out forwards;
+		-webkit-animation: menu-animation 0.6s ease-out forwards;
+		animation: menu-animation 0.6s ease-out forwards;
 	}
 	.top_menu ul.menu {
 		color: white;
@@ -120,7 +120,7 @@
 	.open .top_menu ul.menu li {
 		opacity: 1;
 		transition: transform 0.2s ease-out, opacity 0.2s ease-out;
-		transition-delay: 0.75s;
+		transition-delay: 0.55s;
 	}
 
 	@-webkit-keyframes menu-animation {
@@ -261,14 +261,16 @@
 }
 
 @media(max-width: 940px) {
+		/* --------------------------------- header --------------------------------- */
 	.header {
 		padding: 60px 20px 250px 20px;
 	}
 	.heading {
 		font-size: 2em;
 	}
-
-	/* --------------------------------- header --------------------------------- */
+	.slider .oglavline .left_oglavline p {
+		font-size: 2em;
+	}
 
 
 	.cssbackground-block {
@@ -395,52 +397,62 @@
 	.header {
 		padding: 30px 20px 220px 20px;
 	}
-
+	.slider .top_menu nav .top_logo img {
+		
+		max-width: 75px;
+	}
 	.slider .oglavline .left_oglavline h1 {
 		font-size: 2.5em;
 	}
 	.slider .oglavline .left_oglavline p {
 		font-size: 1.5em;
 	}
-
 	.slider .oglavline .right_oglavline {
 		margin: 20px 0 0 0;
 	}
-
 	.slider .oglavline .right_oglavline p {
 		font-size: 1.2em;
 		line-height: 20px;
 	}
-
 	.information_by_category_content_spoiler {
 		margin: 15px 0 0 0;
 	}
-
 	.spoiler ul li {
 		font-size: 1.2em;
 	}
-
 	.oglavline_buttons {
 		flex-direction: column;
 		align-items: center;
 	}
-
 	.oglavline_buttons .show-hide {
 		margin: 30px 0 0 0;
 		text-align: center;
 	}
 
+
+	.form_with_text .form_with-form .form_with_obratnuj-zvonok .form_with_form-zvonok input {
+		font-size: 1.2em;
+	}
+
+
+	.numbers_contant .numbers_text .number {
+		font-size: 2.5em;
+	}
+	.numbers_contant .numbers_text h5 {
+		font-size: 1em;
+	}
+
+
 	.specialists_content-blocks .specialists_content-block {
 		width: 270px;
 		margin: 20px 7px;
 	}
-
 	.specialists_content-blocks .specialists_content-block img {
 		width: 100%;
 		max-width: 100%;
 		height: auto;
-
 	}
+
 
 	.gallery {
 		margin: 20px 10px 0px 10px;
@@ -450,9 +462,14 @@
 		margin: 60px 20px 0 20px;
 		padding: 0 50px;
 	}
+
+
 	.form_only-form {
 		padding: 60px 20px;
 		background: white;
+	}
+	.form_only-form-content .form_with-form .form_with_obratnuj-zvonok input {
+		font-size: 1.2em;
 	}
 }
 
@@ -464,10 +481,13 @@
 }
 
 @media(max-width:450px) {
+	.slider .oglavline .left_oglavline h1 {
+		font-size: 2em;
+	}
 	.slider .oglavline .left_oglavline p {
 		margin: 10px 0 0 0;
+		font-size: 1.2em;
 	}
-
 	.spoiler ul li {
 		font-size: 1em;
 		line-height: 17px;
@@ -480,6 +500,33 @@
 		line-height: 17px;
 	}
 
+
+	.form_with_text .form_with-form .form_with_obratnuj-zvonok .form_with_form-zvonok input {
+		font-size: 1em;
+	}
+
+
+	.our_advantages-content-advantageses .our_advantages-block{
+		font-size: 1em ;
+	}
+
+
+	.cssbackground-sector-header h2 {
+		font-size: 1.6em;
+	}
+	.cssbackground-sector-header ul li {
+		font-size: 1em;
+	}
+
+
+	.specialists_content-blocks .specialists_content-block .specialists_content-block-text h4 {
+		font-size: 1.2em;
+	}
+	.specialists_content-blocks .specialists_content-block p {
+		font-size: 1em;
+	}
+
+
 	.gallery {
 		padding: 55px 0px;
 	}
@@ -487,26 +534,32 @@
 		margin: 60px 20px 0 20px;
 		padding: 0 20px;
 	}
+
+
+	.text_content-stock {
+		text-align: center;
+		font-size: 1.2em;
+		position: relative;
+		z-index: 1;
+	}
+
+
+	.form_only-form-content .form_with-form .form_with_obratnuj-zvonok input {
+		font-size: 1em;
+	}
+	.form_only-form-content .contacts_content h5 {
+		font-size: 1.2em;
+	}
+	.form_only-form-content .contacts_content {
+		font-size: 1em;
+	}
 }
 
 @media(max-width:400px) {
-
-	/* .header-burger.active:before, .header-burger.active:after  {
-		background: white;
-	}
-	
-	#main-menu {
-		width: 100%;
-	} */
 	.slider .top_menu nav .button_phone a {
 		margin: 0 10px;
 	}
-	.slider .oglavline .left_oglavline h1 {
-		font-size: 2.4em;
-	}
-	.slider .oglavline .left_oglavline p {
-		font-size: 1.4em;
-	}
+
 
 	.cssbackground-block {
 		max-width: auto;
@@ -514,7 +567,6 @@
 		position: relative;
 		z-index: 1;
 	}
-
 	.cssbackground-block img {
 		max-width: auto;
 		height: 300px;
@@ -530,8 +582,6 @@
 
 @media(max-width:380px) {
 	.gallery_slider {
-
 		padding: 0 5px;
-
 	}
 }
