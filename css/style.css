@@ -775,7 +775,6 @@ font-weight: bold;
 }
 .all_in-one_block {
   text-align: center;
-  /* width: 100%; */
   max-width: 320px;
   margin: 50px;
   -webkit-perspective: 1200;
@@ -792,6 +791,7 @@ font-weight: bold;
   cursor: pointer;
   transform: translateY(-5px);
 }
+
 .flipper {
   position: relative;
   width: 320px;
@@ -816,6 +816,7 @@ font-weight: bold;
   -moz-backface-visibility: hidden;
   backface-visibility: hidden;
   border-radius:20px;
+  transition: 0.3s ease;
   box-shadow: 0 5px 10px 0 rgba(145, 145, 145, 0.5);
   background: linear-gradient(to top, #b4ce77de, #678d7bd8);
 }
