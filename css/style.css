@@ -301,14 +301,17 @@ font-weight: bold;
 /*contant*/
 .slider .oglavline {
   color: white;
-  max-width: 680px;
+  max-width: 900px;
   position: relative;
   top: 100px;
   margin: 0 0 0 40px;
   z-index: 2;
+  background: rgba(0,0,0,0.08);
+  padding: 15px 5px 100px 5px;
+  border-radius:10px;
 }
 .slider .oglavline .left_oglavline h1{
-  font-size: 3.5em;
+  font-size: 2.3em;
   font-weight: 600;
   margin: 15px 0 0 0;
 }
@@ -317,6 +320,14 @@ font-weight: bold;
   text-transform: uppercase;
   margin: 20px 0 0 0;
   border-radius:10px;
+  /* letter-spacing: 0px; */
+}
+.slider .oglavline .left_oglavline p:nth-child(2){
+  
+  font-weight: 900;
+}
+.slider .oglavline .left_oglavline p:nth-child(3){
+  font-size: 2em;
 }
 .slider .oglavline .right_oglavline{
   margin: 35px 0 0 0;
@@ -748,6 +759,12 @@ font-weight: bold;
 /* ------------------------------- all_in-one ------------------------------- */
 .all_in-one{
   padding: 0 20px;
+  position: relative;
+}
+.all_in-one .sper{
+  position: absolute;
+  top: -10%;
+  right: 0;
 }
 .all_in-one_content-blocks{
   margin: 50px auto 0 auto;
@@ -755,11 +772,11 @@ font-weight: bold;
   flex-wrap: wrap;
   justify-content: center;
   max-width: 1500px;
-
 }
 .all_in-one_block {
   text-align: center;
-  width: 320px;
+  /* width: 100%; */
+  max-width: 320px;
   margin: 50px;
   -webkit-perspective: 1200;
   perspective: 1200;
@@ -795,8 +812,7 @@ font-weight: bold;
   backface-visibility: hidden;
   border-radius:20px;
   box-shadow: 0 5px 10px 0 rgba(145, 145, 145, 0.5);
-  /* background: rgba(91, 153, 11, 0.644); */
-  background: linear-gradient(to top, #b4ce77, #678d7b);
+  background: linear-gradient(to top, #b4ce77de, #678d7bd8);
 }
 .front {
   display: flex;
@@ -860,12 +876,26 @@ font-weight: bold;
   -ms-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
-
+.all_in-one .all_in-one_texts {
+  text-align: right;
+  margin: 30px 0 0 0;
+}
+.all_in-one .all_in-one_texts p{
+  font-size: 2em;
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  text-align: right;
+  background:rgba(255, 255, 255, 0.3);
+  padding: 5px;
+  border-radius:10px;
+}
 
 /* ------------------------------- specialists ------------------------------ */
 .specialists {
   background: #ABADB0;
   position: relative;
+  margin: 80px 0 0 0;
   padding:80px 20px;
 }
 .specialists .sper{
