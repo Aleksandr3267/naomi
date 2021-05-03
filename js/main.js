@@ -29,7 +29,15 @@ $('.nav_menu_me .menu a').on('click', function(){
 });
 
 
-
+// block_anim
+$(document).ready(function(){
+  $('.all_in-one_block').click( function(event){
+    if($('.all_in-one_content-blocks').hasClass('one')){
+      $('.all_in-one_block').not($(this)).removeClass('anima');
+    }
+    $(this).toggleClass('anima').next();
+  });
+});
 
 
 

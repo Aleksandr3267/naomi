@@ -786,6 +786,11 @@ font-weight: bold;
   transform-style: preserve-3d;
   position: relative;
   z-index: 2;
+  transition: 0.3s ease;
+}
+.all_in-one_block:hover{
+  cursor: pointer;
+  transform: translateY(-5px);
 }
 .flipper {
   position: relative;
@@ -870,7 +875,7 @@ font-weight: bold;
 .back p {
   padding-top: 3px;
 }
-.all_in-one_block:hover .flipper{
+.all_in-one_block.anima .flipper{
   -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
   -ms-transform: rotateY(180deg);
