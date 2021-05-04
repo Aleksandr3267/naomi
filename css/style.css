@@ -202,7 +202,7 @@ font-weight: bold;
   top: 0;
   display: flex;
   flex-direction:column;
-  background: rgba(0, 0, 0, 0.09);
+  background: rgba(0, 0, 0, 0.15);
 }
 .header .bg_img{
   position: absolute;
@@ -384,11 +384,11 @@ font-weight: bold;
 .spoiler ul li {
   font-size: 1.4em;
   line-height: 25px;
-  color: #000;
+  color: rgb(255, 255, 255);
   display: inline-block;
 }
 .spoiler ul li:nth-child(2){
-  border-bottom:1px solid black;
+  border-bottom:1px solid white;
 }
 .spoiler ul li:last-child{
   margin: 20px 0 0 0;
@@ -464,7 +464,7 @@ font-weight: bold;
   max-width: 1100px;
 }
 /* forma */
-.form_with_text .form_with-form .form_with_obratnuj-zvonok{
+.form_with_text .form_with-form {
   /* background: #ABADB0; */
   background: rgba(156, 156, 156, 0.8);
   width: 100%;
@@ -475,7 +475,7 @@ font-weight: bold;
   align-items: center;
   height: 100%;
 }
-.form_with_text .form_with-form .form_with_obratnuj-zvonok .form_with_form-zvonok input{
+.form_with_text .form_with-form input{
   width: 100%;
   max-width: 500px;
   min-width: 300px;
@@ -488,18 +488,18 @@ font-weight: bold;
   color:white;
   transition: opacity 0.3s ease;
 }
-.form_with_text .form_with-form .form_with_obratnuj-zvonok .form_with_form-zvonok input::placeholder{
+.form_with_text .form_with-form input::placeholder{
   color:white;
   transition: 0.3s ease;
   position: relative;
   font-size: 1.3em;
   bottom: 10px;
 }
-.form_with_text .form_with-form .form_with_obratnuj-zvonok .form_with_form-zvonok input:focus::placeholder{
+.form_with_text .form_with-form input:focus::placeholder{
   transition: 0.3s ease;
   color: transparent;
 }
-.form_with_text .form_with-form .form_with_obratnuj-zvonok .buttons-request{
+.form_with_text .form_with-form .buttons-request{
   margin: 50px 0 0 0;
 }
 /* content text */
