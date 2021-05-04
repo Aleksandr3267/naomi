@@ -202,14 +202,14 @@ font-weight: bold;
   top: 0;
   display: flex;
   flex-direction:column;
-  background: rgba(0, 0, 0, 0.07);
+  background: rgba(0, 0, 0, 0.09);
 }
 .header .bg_img{
   position: absolute;
   height:100%;
   width: 100%;
   background: url(../img/glavnaya1.png) no-repeat center top / cover;
-  top: 0;
+  top: 0px;
   left: 0;
   z-index: -1;
 }
@@ -377,6 +377,9 @@ font-weight: bold;
   height: auto;
   max-height: 0px;
   transition: max-height 0.3s;
+  /* background: rgba(235, 235, 235, 0.4); */
+  border-radius:10px;
+  padding: 0 10px;
 }
 .spoiler ul li {
   font-size: 1.4em;
@@ -392,7 +395,7 @@ font-weight: bold;
 }
 .spoiler ul.active{
   max-height: 100vh;
-  transition: 0.4s linear;
+  padding: 10px;
 }
 .show-hide{
   position: relative;
@@ -424,7 +427,7 @@ font-weight: bold;
 
 /* ----------------------------- form_with_text ----------------------------- */
 .form_with_text{
-  padding: 120px 20px;
+  padding: 100px 20px;
   position: relative;
   background: #E7E7E8;
 }
@@ -700,13 +703,13 @@ font-weight: bold;
   padding: 20px 50px;
 }
 .what_we_can .what_we_can-content {
-  margin: 80px 0 0 0;
+  margin: 50px 0 0 0;
 }
 .what_we_can .what_we_can-content .heading{
   text-align: center;
 }
 .what_we_can .what_we_can-content .we_can-content {
-  margin: 40px 0 0 0;
+  margin: -100px 0 0 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -721,7 +724,7 @@ font-weight: bold;
   width: 100%;
   max-width: 1300px;
 	justify-content: center;
-  margin:50px 20px;
+  margin:10px 20px;
 }
 .cssbackground-sector-header{
   width: 100%;
@@ -732,7 +735,7 @@ font-weight: bold;
   order: 1;
   text-align: left;
   position: relative;
-  margin: 120px 0 0 0;
+  margin: 100px 0 0 0;
 }
 .cssbackground-sector-header h2{
 	font-size: 2.2em;
@@ -923,6 +926,7 @@ font-weight: bold;
   margin: 80px 0 0 0;
   padding:80px 20px;
 }
+
 .specialists .sper{
   position: absolute;
 }
